@@ -38,6 +38,20 @@
         <a class ="btn btn-link" href="{% url 'vending-ogs' %}" role="button"><img src="{% static 'logohana.png' %}"></a>
 </center>
 
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col"><img src="{% static 'maquina1.jpg' %}"></div>
+    <div class="col-5"><img src="{% static 'maquina2.jpg' %}"></div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col">Primera máquina de Vending registrada por los egipcios</div>
+    <div class="col-5">Máquina expendedora de agua bendita, diseñada por Herón de Alejandría</div>
+  </div>
+</div>
+{% endblock %}
 
 
 
