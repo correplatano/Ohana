@@ -11,28 +11,59 @@
 </head>
 <body>
 <div class="dropdown">
-  <a class="btn btn-zero dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <a class="btn btn-zero dropdown-toggle" href="#" role="button" id="dropdownInicio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <img src="{% static 'boton.png' %}">
   </a>
 
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-       <a class="dropdown-item" href="{% url 'sobre-nosotros' %}">Sobre Nosotros</a>
-       <a class="dropdown-item" href="#">Nuestro Café</a>
-    <div class="dropdown">
-      <a class="btn btn-zero dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
-       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
-          <a class="dropdown-item" href="#">Bebidas calientes</a>
-          <a class="dropdown-item" href="#">Bebidas frías</a>
-          <a class="dropdown-item" href="#">Snacks</a>
-       </div>
-    </div>
-         <a class="dropdown-item" href="#">Servicios</a>
-         <a class="dropdown-item" href="#">Promociones</a>
-         <a class="dropdown-item" href="#">Contacto</a>
+  <div class="dropdown-menu" aria-labelledby="dropdownInicio">
+       <a class="dropdown-item"></a>
+       <a class="btn btn-light" role="button" href="{% url 'sobre-nosotros' %}">Sobre nosotros</a>
+       <a class="dropdown-item" href="{% url 'cafe' %}"></a>
+       <a class="btn btn-light" role="button" href="{% url 'cafe' %}">Nuestro Café</a>
+       <a class="dropdown-item dropdown">
+       <a class="btn btn-light dropdown" role="button" id="dropdownProductos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownProductos">
+                <a class="dropdown-item" href="{% url 'bebidas-calientes' %}">Bebidas calientes</a>
+                <a class="dropdown-item" href="{% url 'bebidas-frias' %}">Bebidas frías</a>
+                <a class="dropdown-item" href="{% url 'snacks' %}">Snacks</a>
+            </div>
+       </a>
+       <a class="dropdown-item"></a>
+       <a class="btn btn-light" role="button" href="{% url 'servicios' %}">Servicios</a>
+       <a class="dropdown-item" href="{% url 'promociones' %}"></a>
+       <a class="btn btn-light" role="button" href="{% url 'promociones' %}">Promociones</a>
+       <a class="dropdown-item"></a>
+       <a class="btn btn-light" role="button" href="{% url 'contacto' %}">Contacto</a>
 
   </div>
 </div>
 
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <a class="navbar-brand" href="#"></a>
+     <div class="collapse navbar-collapse" id="navbarNavDropdown">
+       <ul class="navbar-nav">
+         <li class="nav-item active">
+           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#">Link 1</a>
+         </li>
+         <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Dropdown link
+           </a>
+           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+             <a class="dropdown-item" href="#">Action</a>
+             <a class="dropdown-item" href="#">Another action</a>
+             <a class="dropdown-item" href="#">Something else here</a>
+           </div>
+         </li>
+       </ul>
+     </div>
+</nav>
 
 <center>
         <a class ="btn btn-link" href="{% url 'vending-ogs' %}" role="button"><img src="{% static 'logohana.png' %}"></a>
